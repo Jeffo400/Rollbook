@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.britefull.rollbook_alpha01.MainActivity">
+
+    <item
+        android:id="@+id/reset_database"
+        android:title="Delete All Students" />
+    <item
+        android:id="@+id/view_raw_data"
+        android:title="View Raw Data" />
+
+    <item
+        android:id="@+id/sort_alphabet"
+        android:title="Sort A - Z" />
+
+    <item
+        android:id="@+id/send_data"
+        android:title="Upload Data" />
+
+    <item
+        android:id="@+id/start_new_day"
+        android:title="Start New Day" />
+
+</menu>
