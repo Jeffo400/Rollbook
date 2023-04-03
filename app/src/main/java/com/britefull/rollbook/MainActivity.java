@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                 RollEntry rollEntry = new RollEntry(dateView.getText().toString(), mAttendance);
                 rollDB.insertEntry(rollEntry);
 
-                // Builds upload package
+                // Builds upload package as a string
                 String[] uploadPackage = new String[26];
                 for(int i=0; i<=24; i++){
                     uploadPackage[i] = String.valueOf(mAttendance[i]);

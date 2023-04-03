@@ -15,8 +15,20 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+
+/*
+PostData is a class used for posting anonymous data to a Google Sheet for rudimentary data analysis
+Student counts are sorted by grade K-5 and gender
+The data is posted using a simple URL code
+Personal student information is not posted
+ */
 public class PostData extends AsyncTask<String, Void, Boolean> {
-    private static final String url = "https://docs.google.com/forms/d/e/1FAIpQLSfAXWS6P0FG1BMKPJTVL7mO6CBjzcYG79a7mLUBL8Nf65PK6Q/formResponse";
+
+    // Google Sheets URL for posting data
+    private static final String url = "";
+    //
+
+    // Replace values with the correct Google Sheets API cell value
     private static final String DATE = "entry.1845798741";
     private static final String FEMALE_1_K = "entry.1249858774";
     private static final String FEMALE_1_1 = "entry.2099521930";
@@ -43,7 +55,7 @@ public class PostData extends AsyncTask<String, Void, Boolean> {
     private static final String MALE_2_4 = "entry.1063485991";
     private static final String MALE_2_5 = "entry.55207306";
     private static final String TWOCLASSES = "entry.1506893021";
-
+    //
 
     private static final MediaType FORM_DATA_TYPE = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
 
@@ -129,6 +141,12 @@ public class PostData extends AsyncTask<String, Void, Boolean> {
         return result;
     }
 
+
+    /*
+    This method displays the status of the Post attempt
+    Attendance saved = positive result
+    Upload failed = negative result
+     */
     @Override
     protected void onPostExecute(Boolean result) {
         Context mContext = weakContext.get();
